@@ -10,12 +10,17 @@
 + Color is not used as the sole method of conveying content or distinguishing visual elements.
 + Text contrast meets AA (4.5:1) requirements. [Check your Palette!](http://jxnblk.com/colorable/demos/text/)
 + Alt Text for meaningful graphical interface elements.
-+ Annotate Screen Reader Interactions for live content
++ Annotate Screen Reader Interactions for [live content](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
   + e.g. Expected data values, instructions, or required fields.
-+ Name or CTA for controls. Design as much as possible with visible labels.
-+ Annotate known design patterns. 👇 Listed Below 👇
-+ Annotate states of a component.
-+ Multiple ways to interact with the UI (Keyboard, touch, and mouse)
+  + e.g. Screen Reader: Assignment displays current score. Student answers a question which updates their grade. Grade element set to aria-live: polite.
+  + e.g. Screen Reader User encounters a warning modal. Warning set to aria-live: alert.
++ Label or call to action for controls (buttons, forms). Design as much as possible with visible labels.
++ Annotate known design patterns. (Keyboard Interaction, Roles, States, Properties)
+  + Aria authoring includes states for known patterns.
+  + [Button States:](https://www.w3.org/TR/wai-aria-practices/#button) “When the action associated with a button is unavailable, the button has [aria-disabled](https://www.w3.org/TR/wai-aria-1.1/#aria-disabled) set to true.”
++ Confirm that you have multiple ways to interact with the UI (Keyboard, touch, and mouse)
+  + A button can be clicked by a mouse, activated by a finger touch, or activated by press of enter key.
+  + There is a list of several accordion headers. User can open one with a touch, click, or keypress of enter. They can navigate to other tabs by pressing arrow up / down.
 + Tab order is identified and properly managed on page and in modal windows.
 + Focus States are defined: a11ycasts Focus Ring!
 + Can the user Skip to Content?
