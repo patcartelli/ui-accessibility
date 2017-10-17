@@ -22,7 +22,7 @@
   + A button can be clicked by a mouse, activated by a finger touch, or activated by press of enter key.
   + There is a list of several accordion headers. User can open one with a touch, click, or keypress of enter. They can navigate to other tabs by pressing arrow up / down.
 + Tab order is identified and properly managed on page and in modal windows.
-+ Focus States are defined: a11ycasts Focus Ring!
++ Focus States are defined: [a11ycasts Focus Ring!](https://www.youtube.com/watch?v=ilj2P5-5CjI)
 + Can the user Skip to Content?
 + Annotate with the [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
   + Indicate headings (h1, h2, h3, etc.)
