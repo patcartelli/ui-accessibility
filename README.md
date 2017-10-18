@@ -69,3 +69,10 @@
 
 ### 🤓 Command Line
 + [aXe cli](https://github.com/dequelabs/axe-cli) Command Line accessibility check
+
+[license-image]: https://img.shields.io/badge/license-ISC-blue.svg
+[license-url]: https://github.com/patcartelli/ui-accessibility/blob/master/LICENSE
+[travis-image]: https://travis-ci.org/patcartelli/ui-accessibility.svg?branch=master
+[travis-url]: https://travis-ci.org/patcartelli/ui-accessibility
+[dependencyci-image]: https://dependencyci.com/github/patcartelli/ui-accessibility/badge
+[dependencyci-url]: https://dependencyci.com/github/patcartelli/ui-accessibility
