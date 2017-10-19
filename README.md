@@ -24,6 +24,8 @@
   + Focus States are defined: [a11ycasts Focus Ring!](https://www.youtube.com/watch?v=ilj2P5-5CjI)
 + Annotate with the [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
   + Indicate headings (`h1`, `h2`, `h3`, etc.)
+  + Buttons perform an action: ex. Save, Done, Apply, Preview
+  + Links cause change of focus: ex Open a page in a new tab, take you to an anchor somewhere else on the page.
 + Annotate the semantic [Input Types.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
 + Indicate [Landmarks](https://www.w3.org/TR/wai-aria-1.1/#landmark):
   + [General Principles of Landmark Design](https://www.w3.org/TR/wai-aria-practices-1.1/#general-principles-of-landmark-design)
@@ -37,8 +39,6 @@
     + If there are more than one `complementary` landmarks, use `aria-labelledby` to reference the `h2`. [Example](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/navigation.html)
   + Each region landmark should have an `h2` – `h6` (can be offscreen)
     + If there are more than one `region` landmarks, use `aria-labelledby` to reference the heading element
-+ Buttons perform an action: ex. Save, Done, Apply, Preview
-+ Links cause change of focus: ex Open a page in a new tab, take you to an anchor somewhere else on the page.
 
 ## 🎓 Information
 ### Known Design Patterns
