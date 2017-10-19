@@ -10,33 +10,35 @@
 + Color is not used as the sole method of conveying content or distinguishing visual elements.
 + Text contrast meets AA (4.5:1) requirements. [Check your Palette!](http://jxnblk.com/colorable/demos/text/)
 + Alt Text for meaningful graphical interface elements.
-+ Annotate Screen Reader Interactions for [live content](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) such as expected data values, instructions, or required fields. Examples:
-  + Screen Reader: Assignment displays current score. Student answers a question which updates their grade. Grade element set to `aria-live="polite"`
-  + Screen Reader User encounters a warning modal. Warning set to `aria-live="alert"`
 + Label or call to action for controls (buttons, forms). Design as much as possible with visible labels.
 + Annotate known design patterns. (Keyboard Interaction, Roles, States, Properties)
   + [Aria authoring](https://www.w3.org/TR/wai-aria-practices-1.1/#intro) includes states for known patterns.
-  + [Button States:](https://www.w3.org/TR/wai-aria-practices/#button) “When the action associated with a button is unavailable, the button has `[aria-disabled](https://www.w3.org/TR/wai-aria-1.1/#aria-disabled)` set to true.”
+  + [Button States:](https://www.w3.org/TR/wai-aria-practices/#button) “When the action associated with a button is unavailable, the button has [aria-disabled](https://www.w3.org/TR/wai-aria-1.1/#aria-disabled) set to true.”
 + Confirm that you have multiple ways to interact with the UI (Keyboard, touch, and mouse)
   + There is a list of accordions. User can open an accordion with by touch, click, or keypress of enter. They can navigate to other tabs by pressing arrow up / down.
++ Annotate Screen Reader Interactions for [live content](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) such as expected data values, instructions, or required fields. Examples:
+    + Assignment displays grade. Student answers a question which updates their grade. Grade element set to `aria-live="polite"`
+    + User encounters a warning modal. Warning set to `aria-live="alert"`
 + Tab order is identified and properly managed on page and in modal windows.
-+ Focus States are defined: [a11ycasts Focus Ring!](https://www.youtube.com/watch?v=ilj2P5-5CjI)
-+ Can the user Skip to Content?
+  + Can the user Skip to Content?
+  + Focus States are defined: [a11ycasts Focus Ring!](https://www.youtube.com/watch?v=ilj2P5-5CjI)
 + Annotate with the [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
   + Indicate headings (`h1`, `h2`, `h3`, etc.)
-  + Indicate [Landmarks](https://www.w3.org/TR/wai-aria-1.1/#landmark):
-    + Define landmarks with HTML sectioning: `header`, `navigation`, `main`, `aside`, contentinfo (footer), region (section)
-    + If HTML sections don’t fit, use appropriate aria-role
-    + Main landmark should have an h1 (can be placed in banner)
-    + Each navigation landmark should have an `h2` (can be offscreen)
-      + If there are more than one navigation landmarks, use aria-labelledby to reference the h2
-  + Footer / ContentInfo should have an h2: [Aria & HTML5 examples](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/contentinfo.html)
++ Annotate the semantic [Input Types.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
++ Indicate [Landmarks](https://www.w3.org/TR/wai-aria-1.1/#landmark):
+  + [General Principles of Landmark Design](https://www.w3.org/TR/wai-aria-practices-1.1/#general-principles-of-landmark-design)
+  + When possible, define landmarks with HTML sectioning: `aside`, `footer`, `header`, `main`, `nav`, `section`.
+  + Otherwise use appropriate aria-role
+  + Main landmark should have an `h1` (can be placed in banner)
+  + Each navigation landmark should have an `h2` (can be offscreen)
+    + If there are more than one navigation landmarks, use `aria-labelledby` to reference the `h2`
+  + `footer` / `contentinfo` should have an `h2`: [Aria & HTML5 examples](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/contentinfo.html)
   + Each `aside` / `complementary` landmark should have an `h2` (can be offscreen)
-    + If there are more than one complementary landmarks, use aria-labelledby to reference the h2
-  + Each region landmark should have an h2 – h6 (can be offscreen)
-    + If there are more than one region landmarks, use aria-labelledby to reference the heading element
-  + Buttons vs Links: Buttons perform an action and links cause change of focus.
-  + Annotate the semantic [Input Types.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+    + If there are more than one `complementary` landmarks, use `aria-labelledby` to reference the `h2`. [Example](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/navigation.html)
+  + Each region landmark should have an `h2` – `h6` (can be offscreen)
+    + If there are more than one `region` landmarks, use `aria-labelledby` to reference the heading element
++ Buttons perform an action: ex. Save, Done, Apply, Preview
++ Links cause change of focus: ex Open a page in a new tab, take you to an anchor somewhere else on the page.
 
 ## 🎓 Information
 ### Known Design Patterns
