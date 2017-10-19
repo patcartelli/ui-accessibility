@@ -7,10 +7,9 @@
 ## Design Accessibility
 ### Checklist & Resources - 0.3.0
 
-+ Color is not used as the sole method of conveying content or distinguishing visual elements.
-
-+ Text meets AA (4.5:1) color contrast requirements.
-  + [Check your Color Contrast!](http://jxnblk.com/colorable/demos/text/)
+Color is not used as the sole method of conveying content or distinguishing visual elements.
+Text meets AA (4.5:1) color contrast requirements.
++ [Check your Color Contrast!](http://jxnblk.com/colorable/demos/text/)
 
 + Provide Alternative Text (Alt Text) for meaningful graphical interface elements.
   + [Alt Text Basics](https://webaim.org/techniques/alttext/#basics)
