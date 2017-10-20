@@ -24,9 +24,9 @@
 + Annotate Screen Reader Interactions for [live content](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) such as expected data values, instructions, or required fields. Examples:
     + Assignment displays grade. Student answers a question and the grade updates. Grade element set to `aria-live="polite"`
     + User encounters a warning modal. Warning set to `aria-live="alert"`
-+ Tab order is identified and properly managed on the page and in modal windows.
-  + Can the user Skip to Content?
 + Design Focus States to help users navigate and understand where they are on the page.
+  + Is “Skip to Content” available and first in the tab order?
+  + Tab order is identified and properly managed on the page and in modal windows.
   + Video: [a11ycasts Focus Ring!](https://www.youtube.com/watch?v=ilj2P5-5CjI)
 + Annotate with the [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
   + Indicate headings (`h1`, `h2`, `h3`, etc.)
