@@ -20,7 +20,7 @@
   + [Aria authoring](https://www.w3.org/TR/wai-aria-practices-1.1/#intro) includes notes on keyboard interaction, roles, states, properties for known patterns.
 + Confirm that you have multiple ways for users to interact with the interface.
   + Are keyboard, touch, and mouse supported?
-  + There is a list of accordions. User can open an accordion with by touch, click, or keypress of enter. They can navigate to other tabs by pressing arrow up / down.
+  + There is a list of accordions. User can open an accordion with by touch, click, or keypress of enter. User can navigate to other tabs by pressing arrow up / down.
 + Annotate Screen Reader Interactions for [live content](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) such as expected data values, instructions, or required fields. Examples:
     + Assignment displays grade. Student answers a question and the grade updates. Grade element set to `aria-live="polite"`
     + User encounters a warning modal. Warning set to `aria-live="alert"`
