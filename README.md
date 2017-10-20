@@ -17,22 +17,21 @@
   + Design as much as possible with visible labels.
  + Do not rely on visuals or sound to indicate important instructions for operating content.
 + Annotate known design patterns. (Keyboard Interaction, Roles, States, Properties)
-  + [Aria authoring](https://www.w3.org/TR/wai-aria-practices-1.1/#intro) includes states for known patterns.
-  + [Button States:](https://www.w3.org/TR/wai-aria-practices/#button) “When the action associated with a button is unavailable, the button has [aria-disabled](https://www.w3.org/TR/wai-aria-1.1/#aria-disabled) set to true.”
-+ Confirm that you have multiple ways to interact with the UI.
+  + [Aria authoring](https://www.w3.org/TR/wai-aria-practices-1.1/#intro) includes notes on keyboard interaction, roles, states, properties for known patterns.
++ Confirm that you have multiple ways for users to interact with the interface.
   + Are keyboard, touch, and mouse supported?
   + There is a list of accordions. User can open an accordion with by touch, click, or keypress of enter. They can navigate to other tabs by pressing arrow up / down.
 + Annotate Screen Reader Interactions for [live content](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) such as expected data values, instructions, or required fields. Examples:
-    + Assignment displays grade. Student answers a question which updates their grade. Grade element set to `aria-live="polite"`
+    + Assignment displays grade. Student answers a question and the grade updates. Grade element set to `aria-live="polite"`
     + User encounters a warning modal. Warning set to `aria-live="alert"`
-+ Tab order is identified and properly managed on page and in modal windows.
++ Tab order is identified and properly managed on the page and in modal windows.
   + Can the user Skip to Content?
 + Design Focus States to help users navigate and understand where they are on the page.
   + Video: [a11ycasts Focus Ring!](https://www.youtube.com/watch?v=ilj2P5-5CjI)
 + Annotate with the [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
   + Indicate headings (`h1`, `h2`, `h3`, etc.)
   + Buttons perform an action: ex. Save, Done, Apply, Preview
-  + Links cause change of focus: ex Open a page in a new tab, take you to an anchor somewhere else on the page.
+  + Links cause change of focus: ex Open a page in a new tab or take you to an anchor somewhere else on the page.
   + Annotate the semantic [Input Types.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) Examples: [Checkbox, email, password, button.](https://codepen.io/sh0ji/pen/VebrBM)
 + Indicate [Landmarks](https://www.w3.org/TR/wai-aria-1.1/#landmark):
   + [General Principles of Landmark Design](https://www.w3.org/TR/wai-aria-practices-1.1/#general-principles-of-landmark-design)
@@ -68,9 +67,11 @@ Good reference for annotating specific components in your design.
 + [Colorable](http://jxnblk.com/colorable/demos/text/?background=%23342324&foreground=%23EFFFA8)
 
 ### 🖥 Extensions
-+ [Tota11y](https://chrome.google.com/webstore/detail/tota11y-plugin-from-khan/oedofneiplgibimfkccchnimiadcmhpe?hl=en)
 + [Chrome Lens](https://chrome.google.com/webstore/detail/chromelens/idikgljglpfilbhaboonnpnnincjhjkd?hl=en)
++ [Funkify](http://www.funkify.org/)
++ [Tota11y](https://chrome.google.com/webstore/detail/tota11y-plugin-from-khan/oedofneiplgibimfkccchnimiadcmhpe?hl=en)
 + [Wave Chrome Tools](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US)
+
 
 ### 🤓 Command Line
 + [aXe cli](https://github.com/dequelabs/axe-cli) Command Line accessibility check
