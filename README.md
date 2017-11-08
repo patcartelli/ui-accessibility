@@ -18,7 +18,7 @@
     + If you must include a meaningful graphical interface element without a label, alt text is required to describe the function of this element.
 + Alternative text (alt text) is provided for meaningful content images and graphical interface elements.
   + Meaningful graphical interface elements can be things that aren't actually images, such as font icons, image-like unicode (e.g. emoji), or stylized CSS.
-  + Alt text for meaningful content images should be provided by Editorial.
+  + Meaningful content images require alt text.
   + Decorative images do not need alt text.
   + [Alt Text Basics](https://webaim.org/techniques/alttext/#basics)
   + [Accessibility: Image Alt text best practices](https://support.siteimprove.com/hc/en-gb/articles/115000013031-Accessibility-Image-Alt-text-best-practices)
