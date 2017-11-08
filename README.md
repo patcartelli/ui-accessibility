@@ -4,58 +4,63 @@
 
 > notes on interface accessibility.
 
-## Design Accessibility
-### Checklist & Resources - 0.3.0
+## Design Accessibility Guidelines
 
-+ Color is not used as the sole method of conveying content or distinguishing visual elements.
+### Design
++ Color is not used as the sole method of conveying meaning or distinguishing visual elements.
++ Do not rely on visuals or sound to indicate important instructions for operating content.
+    + Incorrect: Only uses sound to indicate success or only uses color to indicate success.
+    + Correct: Uses both a sound or color as well as a label to indicate success.
 + Text meets AA (4.5:1) color contrast requirements.
   + [Check your Color Contrast!](http://jxnblk.com/colorable/demos/text/)
-+ Provide Alternative Text (Alt Text) for meaningful graphical interface elements.
++ Every call to action (such as buttons, form elements, etc.) must be meaningfully named.
+    + Design as much as possible with visible labels.
+    + If you must include a meaningful graphical interface element without a label, alt text is required to describe the function of this element.
++ Alternative text (alt text) is provided for meaningful content images and graphical interface elements.
+  + Meaningful graphical interface elements can be things that aren't actually images, such as font icons, image-like unicode (e.g. emoji), or stylized CSS.
+  + Alt text for meaningful content images should be provided by Editorial.
+  + Decorative images do not need alt text.
   + [Alt Text Basics](https://webaim.org/techniques/alttext/#basics)
   + [Accessibility: Image Alt text best practices](https://support.siteimprove.com/hc/en-gb/articles/115000013031-Accessibility-Image-Alt-text-best-practices)
-+ Use labels or a call to action for controls (buttons, forms).
-  + Design as much as possible with visible labels.
- + Do not rely on visuals or sound to indicate important instructions for operating content.
-+ Annotate known design patterns. (Keyboard Interaction, Roles, States, Properties)
-  + [Aria authoring](https://www.w3.org/TR/wai-aria-practices-1.1/#intro) includes notes on keyboard interaction, roles, states, properties for known patterns.
-+ Confirm that you have multiple ways for users to interact with the interface.
-  + Are keyboard, touch, and mouse supported?
-  + There is a list of accordions. User can open an accordion with by touch, click, or keypress of enter. User can navigate to other tabs by pressing arrow up / down.
-+ Annotate Screen Reader Interactions for [live content](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) such as expected data values, instructions, or required fields. Examples:
-    + Assignment displays grade. Student answers a question and the grade updates. Grade element set to `aria-live="polite"`
-    + User encounters a warning modal. Warning set to `aria-live="alert"`
-+ Design Focus States to help users navigate and understand where they are on the page.
-  + Is “Skip to Content” available and first in the tab order?
+
+### Annotations
++ **Documentation Reference** - Reference the [ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#intro) for known design patterns. These guidelines includes descriptive annotations for keyboard interaction, roles, and states.
+  + Confirm that keyboard, touch, and mouse are supported to provide users multiple ways to interact with the interface.
+  + E.g. In a list of accordions, the user can open an accordion with by touch, click, or keypress of enter. User can navigate to other accordions by pressing arrow up / down.
++ **Aria-live**- Annotate screen reader interactions for live content such as expected data values, instructions, or required fields. Examples available here: [MDN - ARIA Live Regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
++ **Focus Indication** - Design Focus States to help users navigate and understand where they are.
+  + Is "Skip to Content" available and first in the tab order?
   + Tab order is identified and properly managed on the page and in modal windows.
   + Video: [a11ycasts Focus Ring!](https://www.youtube.com/watch?v=ilj2P5-5CjI)
-+ Annotate with the [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
++ Annotate using the appropriate [HTML semantic elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
   + Indicate headings (`h1`, `h2`, `h3`, etc.)
-  + Buttons perform an action: ex. Save, Done, Apply, Preview
-  + Links cause change of focus: ex Open a page in a new tab or take you to an anchor somewhere else on the page.
+    + E.g. "Document title H1"
   + Annotate the semantic [Input Types.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) Examples: [Checkbox, email, password, button.](https://codepen.io/sh0ji/pen/VebrBM)
-+ Indicate [Landmarks](https://www.w3.org/TR/wai-aria-1.1/#landmark):
-  + [General Principles of Landmark Design](https://www.w3.org/TR/wai-aria-practices-1.1/#general-principles-of-landmark-design)
-  + When possible, define landmarks with HTML sectioning: `aside`, `footer`, `header`, `main`, `nav`, `section`.
-  + Otherwise use appropriate aria-role
-  + Main landmark should have an `h1` (can be placed in banner)
-  + Each navigation landmark should have an `h2` (can be offscreen)
-    + If there are more than one navigation landmarks, use `aria-labelledby` to reference the `h2`
-  + `footer` / `contentinfo` should have an `h2`: [Aria & HTML5 examples](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/contentinfo.html)
-  + Each `aside` / `complementary` landmark should have an `h2` (can be offscreen)
-    + If there are more than one `complementary` landmarks, use `aria-labelledby` to reference the `h2`. [Example](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/navigation.html)
-  + Each region landmark should have an `h2` – `h6` (can be offscreen)
-    + If there are more than one `region` landmarks, use `aria-labelledby` to reference the heading element
+  * Buttons perform an action such as "Save" or “Apply.”
+  * Links cause change of focus: Opens a page in a new tab or takes you to an anchor elsewhere on the page.
++ Indicate [Landmarks](https://www.w3.org/TR/wai-aria-1.1/#landmark) — [General Principles of Landmark Design](https://www.w3.org/TR/wai-aria-practices-1.1/#general-principles-of-landmark-design)
+  + Always define the [main](https://www.w3.org/TR/wai-aria-practices-1.1/#aria_lh_main) content container if it exists.
+  + Define [other landmark regions](https://www.w3.org/TR/wai-aria-practices-1.1/#landmark-roles) in your wireframes wherever possible.
+      + Main landmark should have an h1 (can be placed in banner)
+      + navigation landmarks should have an h2 (can be offscreen)
+      + footer should have an h2 (can be offscreen)
+      + Each aside landmark should have an h2 (can be offscreen)
+      + Each region landmark should have an h2 – h6 (can be offscreen)
 
 ## 🎓 Information
 
 ### 📚 Reading & Documentation
 Good reference for annotating specific components in your design.
-+ Known Design Patterns [WAI-ARIA Authoring Practices 1.1](https://www.w3.org/TR/wai-aria-practices-1.1/#intro)
++ Known Design Patterns: [WAI-ARIA Authoring Practices 1.1](https://www.w3.org/TR/wai-aria-practices-1.1/#intro)
 + [Vox Accessibility Guidelines](http://accessibility.voxmedia.com/)
 + [Material Design Accessibility Implementation](https://material.io/guidelines/usability/accessibility.html#accessibility-implementation)
 + [Accessibility - Web Fundamentals - Google Developers](https://developers.google.com/web/fundamentals/accessibility/)
 + [WebAIM's WCAG 2.0 Checklist](https://webaim.org/standards/wcag/checklist)
 + [An Incomplete Guide to Inclusive Language for Startups and Tech](https://open.buffer.com/inclusive-language-tech/)
++ [http://a11y-style-guide.com/style-guide/](http://a11y-style-guide.com/style-guide/)
++ [https://developers.google.com/web/fundamentals/accessibility/focus/using-tabindex](https://developers.google.com/web/fundamentals/accessibility/focus/using-tabindex)
+https://material.io/guidelines/usability/accessibility.html#accessibility-principles
++ [https://styleguide.mailchimp.com/voice-and-tone/](https://styleguide.mailchimp.com/voice-and-tone/)
 
 ### 📹 Videos
 + [Intro to Aria](https://www.youtube.com/watch?v=g9Qff0b-lHk&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
@@ -63,8 +68,8 @@ Good reference for annotating specific components in your design.
 
 ## 🛠 Tools
 ### 🎨 Color
-+ [Material Design - Color Tool](https://material.io/color/#!/?view.left=0&view.right=0)
 + [Colorable](http://jxnblk.com/colorable/demos/text/?background=%23342324&foreground=%23EFFFA8)
++ [Material Design - Color Tool](https://material.io/color/#!/?view.left=0&view.right=0)
 
 ### 🖥 Extensions
 + [Chrome Lens](https://chrome.google.com/webstore/detail/chromelens/idikgljglpfilbhaboonnpnnincjhjkd?hl=en)
