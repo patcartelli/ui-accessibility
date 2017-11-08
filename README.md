@@ -9,8 +9,8 @@
 ### Design
 + Color is not used as the sole method of conveying meaning or distinguishing visual elements.
 + Do not rely on visuals or sound to indicate important instructions for operating content.
-    + Incorrect: Only uses sound to indicate success or only uses color to indicate success.
-    + Correct: Uses both a sound or color as well as a label to indicate success.
+    + **Incorrect:** Only uses sound to indicate success or only uses color to indicate success.
+    + **Correct:** Uses both a sound or color as well as a label to indicate success.
 + Text meets AA (4.5:1) color contrast requirements.
   + [Check your Color Contrast!](http://jxnblk.com/colorable/demos/text/)
 + Every call to action (such as buttons, form elements, etc.) must be meaningfully named.
@@ -41,11 +41,11 @@
 + Indicate [Landmarks](https://www.w3.org/TR/wai-aria-1.1/#landmark) — [General Principles of Landmark Design](https://www.w3.org/TR/wai-aria-practices-1.1/#general-principles-of-landmark-design)
   + Always define the [main](https://www.w3.org/TR/wai-aria-practices-1.1/#aria_lh_main) content container if it exists.
   + Define [other landmark regions](https://www.w3.org/TR/wai-aria-practices-1.1/#landmark-roles) in your wireframes wherever possible.
-      + Main landmark should have an h1 (can be placed in banner)
-      + navigation landmarks should have an h2 (can be offscreen)
-      + footer should have an h2 (can be offscreen)
-      + Each aside landmark should have an h2 (can be offscreen)
-      + Each region landmark should have an h2 – h6 (can be offscreen)
+      + `main` landmark should have an `h1` (can be placed in banner)
+      + `navigation` landmarks should have an `h2` (can be offscreen)
+      + `footer` should have an `h2` (can be offscreen)
+      + Each `aside` landmark should have an `h2` (can be offscreen)
+      + Each `region` landmark should have an `h2` – `h6` (can be offscreen)
 
 ## 🎓 Information
 
